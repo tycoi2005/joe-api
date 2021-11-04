@@ -99,10 +99,20 @@ async function totalSupply(ctx) {
   ctx.body = (await cache.getTotalSupply()).toString();
 }
 
+async function getMaxSupply(ctx) {
+  return await cache.getMaxSupply();
+}
+
+async function getCirculatingSupply(ctx) {
+  return await cache.getCirculatingSupply();
+}
+
 const cache = new Cache();
 module.exports = {
   circulatingSupply,
   circulatingSupplyAdjusted,
   totalSupply,
   maxSupply,
+  getCirculatingSupply,
+  getMaxSupply,
 };
