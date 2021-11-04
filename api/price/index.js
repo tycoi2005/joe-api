@@ -233,4 +233,4 @@ async function derivedPriceOfToken(ctx) {
 }
 
 const cache = new Cache();
-module.exports = { priceOfToken, derivedPriceOfToken };
+module.exports = { getPrice, getAvaxPrice, priceOfToken, derivedPriceOfToken };
